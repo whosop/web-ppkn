@@ -1,285 +1,152 @@
-<<<<<<< HEAD
-// Smooth scroll untuk navigasi
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            target.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
+/* ============================================================
+   INDONESIA DI ERA GLOBAL — Analisis SWOT
+   Satu script: progres baca, menu mobile, akordeon,
+   nav aktif, animasi reveal, kembali ke atas.
+   ============================================================ */
+(function () {
+    'use strict';
+
+    var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    /* ---------- 1. Progres bar membaca ---------- */
+    var progress = document.getElementById('readingProgress');
+
+    function updateProgress() {
+        var doc = document.documentElement;
+        var scrollable = doc.scrollHeight - doc.clientHeight;
+        var ratio = scrollable > 0 ? (doc.scrollTop || document.body.scrollTop) / scrollable : 0;
+        progress.style.width = Math.min(100, Math.max(0, ratio * 100)) + '%';
+    }
+
+    /* ---------- 2. Menu mobile ---------- */
+    var navToggle = document.getElementById('navToggle');
+    var navMenu = document.getElementById('navMenu');
+
+    function closeMenu() {
+        navMenu.classList.remove('is-open');
+        navToggle.setAttribute('aria-expanded', 'false');
+    }
+
+    navToggle.addEventListener('click', function () {
+        var open = navMenu.classList.toggle('is-open');
+        navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+
+    document.addEventListener('click', function (e) {
+        if (!navMenu.contains(e.target) && !navToggle.contains(e.target)) {
+            closeMenu();
+        }
+    });
+
+    document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') closeMenu();
+    });
+
+    /* ---------- 3. Akordeon Tantangan ---------- */
+    var accItems = document.querySelectorAll('.acc-item');
+
+    accItems.forEach(function (item) {
+        var trigger = item.querySelector('.acc-trigger');
+
+        trigger.addEventListener('click', function () {
+            var isOpen = item.classList.contains('is-open');
+
+            accItems.forEach(function (other) {
+                other.classList.remove('is-open');
+                other.querySelector('.acc-trigger').setAttribute('aria-expanded', 'false');
             });
-        }
-    });
-});
 
-// Animasi fade-in saat scroll
-const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -100px 0px'
-};
-
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.style.opacity = '0';
-            entry.target.style.transform = 'translateY(20px)';
-            
-            setTimeout(() => {
-                entry.target.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
-            }, 100);
-            
-            observer.unobserve(entry.target);
-        }
-    });
-}, observerOptions);
-
-// Observe semua card
-document.addEventListener('DOMContentLoaded', () => {
-    const cards = document.querySelectorAll('.card, .challenge-item, .weakness-card');
-    cards.forEach(card => observer.observe(card));
-
-    // Highlight active navigation
-    const sections = document.querySelectorAll('.section');
-    const navLinks = document.querySelectorAll('.nav-menu a');
-
-    window.addEventListener('scroll', () => {
-        let current = '';
-        sections.forEach(section => {
-            const sectionTop = section.offsetTop;
-            const sectionHeight = section.clientHeight;
-            if (pageYOffset >= sectionTop - 200) {
-                current = section.getAttribute('id');
-            }
-        });
-
-        navLinks.forEach(link => {
-            link.style.opacity = '0.8';
-            if (link.getAttribute('href').substring(1) === current) {
-                link.style.opacity = '1';
-                link.style.fontWeight = 'bold';
+            if (!isOpen) {
+                item.classList.add('is-open');
+                trigger.setAttribute('aria-expanded', 'true');
             }
         });
     });
 
-    // Counter animation untuk angka
-    const animateCounter = (element, target) => {
-        let current = 0;
-        const increment = target / 50;
-        const timer = setInterval(() => {
-            current += increment;
-            if (current >= target) {
-                element.textContent = target;
-                clearInterval(timer);
-            } else {
-                element.textContent = Math.floor(current);
-            }
-        }, 30);
-    };
+    /* ---------- 4. Penanda nav aktif saat scroll ---------- */
+    var navLinks = Array.prototype.slice.call(document.querySelectorAll('.nav-menu a'));
+    var watched = navLinks
+        .map(function (link) {
+            var id = link.getAttribute('href').slice(1);
+            var section = document.getElementById(id);
+            return section ? { link: link, section: section } : null;
+        })
+        .filter(Boolean);
 
-    // Back to top button (optional - bisa ditambahkan jika diperlukan)
-    const createBackToTop = () => {
-        const button = document.createElement('button');
-        button.innerHTML = '↑';
-        button.className = 'back-to-top';
-        button.style.cssText = `
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%);
-            color: white;
-            border: none;
-            font-size: 24px;
-            cursor: pointer;
-            opacity: 0;
-            transition: opacity 0.3s, transform 0.3s;
-            z-index: 1000;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        `;
+    function updateActiveNav() {
+        var position = window.scrollY + 140;
+        var current = null;
 
-        button.addEventListener('click', () => {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
+        watched.forEach(function (entry) {
+            if (entry.section.offsetTop <= position) current = entry;
         });
 
-        window.addEventListener('scroll', () => {
-            if (window.pageYOffset > 300) {
-                button.style.opacity = '1';
-            } else {
-                button.style.opacity = '0';
-            }
+        navLinks.forEach(function (link) {
+            link.classList.remove('is-active');
         });
+        if (current) current.link.classList.add('is-active');
+    }
 
-        button.addEventListener('mouseenter', () => {
-            button.style.transform = 'scale(1.1)';
-        });
+    /* ---------- 5. Kembali ke atas ---------- */
+    var toTop = document.createElement('button');
+    toTop.className = 'to-top';
+    toTop.type = 'button';
+    toTop.setAttribute('aria-label', 'Kembali ke atas');
+    toTop.innerHTML = '&#8593;';
+    document.body.appendChild(toTop);
 
-        button.addEventListener('mouseleave', () => {
-            button.style.transform = 'scale(1)';
-        });
-
-        document.body.appendChild(button);
-    };
-
-    createBackToTop();
-});
-
-// Loading animation
-window.addEventListener('load', () => {
-    document.body.style.opacity = '0';
-    setTimeout(() => {
-        document.body.style.transition = 'opacity 0.5s ease';
-        document.body.style.opacity = '1';
-    }, 100);
-});
-
-// Console log untuk debugging
-console.log('🇮🇩 Website PPKn - Indonesia di Era Global');
-console.log('✅ JavaScript loaded successfully');
-=======
-// Smooth scroll untuk navigasi
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            target.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
-        }
-    });
-});
-
-// Animasi fade-in saat scroll
-const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -100px 0px'
-};
-
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.style.opacity = '0';
-            entry.target.style.transform = 'translateY(20px)';
-            
-            setTimeout(() => {
-                entry.target.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
-            }, 100);
-            
-            observer.unobserve(entry.target);
-        }
-    });
-}, observerOptions);
-
-// Observe semua card
-document.addEventListener('DOMContentLoaded', () => {
-    const cards = document.querySelectorAll('.card, .challenge-item, .weakness-card');
-    cards.forEach(card => observer.observe(card));
-
-    // Highlight active navigation
-    const sections = document.querySelectorAll('.section');
-    const navLinks = document.querySelectorAll('.nav-menu a');
-
-    window.addEventListener('scroll', () => {
-        let current = '';
-        sections.forEach(section => {
-            const sectionTop = section.offsetTop;
-            const sectionHeight = section.clientHeight;
-            if (pageYOffset >= sectionTop - 200) {
-                current = section.getAttribute('id');
-            }
-        });
-
-        navLinks.forEach(link => {
-            link.style.opacity = '0.8';
-            if (link.getAttribute('href').substring(1) === current) {
-                link.style.opacity = '1';
-                link.style.fontWeight = 'bold';
-            }
-        });
+    toTop.addEventListener('click', function () {
+        window.scrollTo({ top: 0, behavior: reduceMotion ? 'auto' : 'smooth' });
     });
 
-    // Counter animation untuk angka
-    const animateCounter = (element, target) => {
-        let current = 0;
-        const increment = target / 50;
-        const timer = setInterval(() => {
-            current += increment;
-            if (current >= target) {
-                element.textContent = target;
-                clearInterval(timer);
-            } else {
-                element.textContent = Math.floor(current);
-            }
-        }, 30);
-    };
+    function updateToTop() {
+        toTop.classList.toggle('is-visible', window.scrollY > 500);
+    }
 
-    // Back to top button (optional - bisa ditambahkan jika diperlukan)
-    const createBackToTop = () => {
-        const button = document.createElement('button');
-        button.innerHTML = '↑';
-        button.className = 'back-to-top';
-        button.style.cssText = `
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%);
-            color: white;
-            border: none;
-            font-size: 24px;
-            cursor: pointer;
-            opacity: 0;
-            transition: opacity 0.3s, transform 0.3s;
-            z-index: 1000;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        `;
+    /* ---------- 6. Satu handler scroll ---------- */
+    var ticking = false;
 
-        button.addEventListener('click', () => {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
+    function onScroll() {
+        if (ticking) return;
+        ticking = true;
+        window.requestAnimationFrame(function () {
+            updateProgress();
+            updateActiveNav();
+            updateToTop();
+            ticking = false;
         });
+    }
 
-        window.addEventListener('scroll', () => {
-            if (window.pageYOffset > 300) {
-                button.style.opacity = '1';
-            } else {
-                button.style.opacity = '0';
-            }
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll);
+
+    /* ---------- 7. Animasi reveal saat masuk layar ---------- */
+    var revealEls = document.querySelectorAll('.reveal');
+
+    if (reduceMotion || !('IntersectionObserver' in window)) {
+        revealEls.forEach(function (el) {
+            el.classList.add('is-in');
         });
+    } else {
+        var observer = new IntersectionObserver(
+            function (entries) {
+                entries.forEach(function (entry) {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-in');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            },
+            { threshold: 0.08, rootMargin: '0px 0px -60px 0px' }
+        );
 
-        button.addEventListener('mouseenter', () => {
-            button.style.transform = 'scale(1.1)';
+        revealEls.forEach(function (el) {
+            observer.observe(el);
         });
+    }
 
-        button.addEventListener('mouseleave', () => {
-            button.style.transform = 'scale(1)';
-        });
-
-        document.body.appendChild(button);
-    };
-
-    createBackToTop();
-});
-
-// Loading animation
-window.addEventListener('load', () => {
-    document.body.style.opacity = '0';
-    setTimeout(() => {
-        document.body.style.transition = 'opacity 0.5s ease';
-        document.body.style.opacity = '1';
-    }, 100);
-});
-
-// Console log untuk debugging
-console.log('🇮🇩 Website PPKn - Indonesia di Era Global');
-console.log('✅ JavaScript loaded successfully');
->>>>>>> upstream/main
+    /* ---------- 8. Inisialisasi ---------- */
+    updateProgress();
+    updateActiveNav();
+    updateToTop();
+})();

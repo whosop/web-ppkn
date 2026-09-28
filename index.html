@@ -3,430 +3,717 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Indonesia di Era Global - Analisis Komprehensif</title>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style-new.css">
+    <title>Indonesia di Era Global — Analisis SWOT | Tugas PPKn</title>
+    <meta name="description" content="Analisis SWOT bangsa Indonesia: kekuatan, kelemahan, peluang, dan tantangan dalam menerapkan Pancasila di era global. Tugas Pendidikan Pancasila dan Kewarganegaraan.">
+    <script>document.documentElement.classList.add('js');</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <!-- Reading Progress Bar -->
-    <div class="reading-progress" id="readingProgress"></div>
+<body id="top">
 
-    <header>
-        <nav>
-            <div class="container">
-                <div class="nav-brand">
-                    <span class="brand-icon">🇮🇩</span>
-                    <span class="brand-text">Indonesia di Era Global</span>
-                </div>
-                <ul class="nav-menu">
-                    <li><a href="#potensi">Potensi</a></li>
-                    <li><a href="#peluang">Peluang</a></li>
-                    <li><a href="#tantangan">Tantangan</a></li>
-                    <li><a href="#kelemahan">Kelemahan</a></li>
-                    <li><a href="#team">Tim</a></li>
-                </ul>
-            </div>
+    <div class="reading-progress" id="readingProgress" aria-hidden="true"></div>
+
+    <header class="site-header">
+        <nav class="nav container" aria-label="Navigasi utama">
+            <a class="brand" href="#top">
+                <span class="brand-mark" aria-hidden="true">ID</span>
+                Indonesia di Era Global
+            </a>
+
+            <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu">
+                <span class="nav-bar" aria-hidden="true"></span>
+                <span class="nav-bar" aria-hidden="true"></span>
+                <span class="nav-bar" aria-hidden="true"></span>
+                <span class="sr-only">Buka menu</span>
+            </button>
+
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#kekuatan">Kekuatan</a></li>
+                <li><a href="#kelemahan">Kelemahan</a></li>
+                <li><a href="#peluang">Peluang</a></li>
+                <li><a href="#tantangan">Tantangan</a></li>
+                <li><a href="#kesimpulan">Kesimpulan</a></li>
+                <li><a href="#tim">Tim</a></li>
+            </ul>
         </nav>
     </header>
 
     <main>
-        <!-- Hero Section -->
+
+        <!-- ══════════════════ MASTHEAD ══════════════════ -->
         <section class="hero">
             <div class="container">
-                <div class="hero-content">
-                    <span class="hero-label">Pendidikan Pancasila & Kewarganegaraan</span>
-                    <h1 class="hero-title">Indonesia di Era Global</h1>
-                    <p class="hero-subtitle">Analisis mendalam tentang potensi, peluang, tantangan, dan kelemahan bangsa Indonesia dalam menghadapi dinamika global</p>
-                    <div class="hero-stats">
-                        <div class="hero-stat">
-                            <div class="stat-num">270M+</div>
-                            <div class="stat-desc">Penduduk</div>
-                        </div>
-                        <div class="hero-stat">
-                            <div class="stat-num">#4</div>
-                            <div class="stat-desc">Dunia</div>
-                        </div>
-                        <div class="hero-stat">
-                            <div class="stat-num">17,000</div>
-                            <div class="stat-desc">Pulau</div>
-                        </div>
-                        <div class="hero-stat">
-                            <div class="stat-num">1,331</div>
-                            <div class="stat-desc">Suku Bangsa</div>
-                        </div>
+                <p class="kicker">Tugas PPKn &middot; Analisis SWOT &middot; Kelompok 2</p>
+                <h1 class="hero-title">Indonesia <em>di Era Global</em></h1>
+                <p class="standfirst">Empat sisi yang jarang dibaca bersamaan: kekuatan yang kita miliki, kelemahan yang kita rawat, peluang yang terbuka, dan tantangan yang menguji ketahanan Pancasila.</p>
+            </div>
+
+            <div class="container">
+                <!-- PLACEHOLDER GAMBAR: ganti seluruh isi <div class="media-frame"> jadi
+                     <img class="media-img" src="images/hero.jpg" alt="Kepulauan Indonesia dari udara"> -->
+                <figure class="media media--wide reveal">
+                  <img class="media-img" src="images/foto 1.jpg" alt="Kepulauan Indonesia dari udara">
+                    <figcaption>Wilayah kepulauan Indonesia membentang dari Sabang sampai Merauke &mdash; ruang yang dijaga oleh kekuatan maritim bangsa.</figcaption>
+                </figure>
+            </div>
+
+            <div class="container">
+                <dl class="data-strip reveal">
+                    <div class="data-item">
+                        <dt>270 jt+</dt>
+                        <dd>Jumlah penduduk, terbesar ke&#8209;4 di dunia</dd>
                     </div>
+                    <div class="data-item">
+                        <dt>17.000</dt>
+                        <dd>Pulau, negara kepulauan terbesar di dunia</dd>
+                    </div>
+                    <div class="data-item">
+                        <dt>1.331</dt>
+                        <dd>Suku bangsa dengan 719 bahasa adat</dd>
+                    </div>
+                    <div class="data-item">
+                        <dt>81 rb km</dt>
+                        <dd>Panjang pantai, 25% pantai dunia</dd>
+                    </div>
+                </dl>
+            </div>
+        </section>
+
+        <!-- ══════════════════ MATRIKS SWOT ══════════════════ -->
+        <section class="matrix" id="matriks" aria-labelledby="matrix-title">
+            <div class="container">
+                <div class="matrix-head">
+                    <p class="kicker">Kerangka Analisis</p>
+                    <h2 class="matrix-title" id="matrix-title">Matriks SWOT</h2>
+                </div>
+
+                <div class="matrix-grid reveal">
+                    <a class="matrix-cell" href="#kekuatan">
+                        <span class="matrix-letter" aria-hidden="true">S</span>
+                        <span class="matrix-body">
+                            <span class="matrix-name">Kekuatan</span>
+                            <span class="matrix-sub">Strengths &mdash; potensi internal yang menguntungkan</span>
+                            <span class="matrix-meta">6 poin &middot; halaman 01</span>
+                        </span>
+                    </a>
+                    <a class="matrix-cell" href="#kelemahan">
+                        <span class="matrix-letter" aria-hidden="true">W</span>
+                        <span class="matrix-body">
+                            <span class="matrix-name">Kelemahan</span>
+                            <span class="matrix-sub">Weaknesses &mdash; masalah internal yang menghambat</span>
+                            <span class="matrix-meta">7 poin &middot; halaman 02</span>
+                        </span>
+                    </a>
+                    <a class="matrix-cell" href="#peluang">
+                        <span class="matrix-letter" aria-hidden="true">O</span>
+                        <span class="matrix-body">
+                            <span class="matrix-name">Peluang</span>
+                            <span class="matrix-sub">Opportunities &mdash; kesempatan dari luar maupun dalam</span>
+                            <span class="matrix-meta">5 poin &middot; halaman 03</span>
+                        </span>
+                    </a>
+                    <a class="matrix-cell" href="#tantangan">
+                        <span class="matrix-letter" aria-hidden="true">T</span>
+                        <span class="matrix-body">
+                            <span class="matrix-name">Tantangan</span>
+                            <span class="matrix-sub">Threats &mdash; ancaman yang menuntut kesiapan</span>
+                            <span class="matrix-meta">9 poin &middot; halaman 04</span>
+                        </span>
+                    </a>
                 </div>
             </div>
         </section>
 
-        <!-- Potensi Bangsa -->
-        <section id="potensi" class="section">
+        <!-- ══════════════════ 01 · KEKUATAN (S) ══════════════════ -->
+        <section class="section" id="kekuatan" aria-labelledby="s-title">
             <div class="container">
-                <div class="section-intro">
-                    <span class="section-label">01 — Kekuatan Bangsa</span>
-                    <h2 class="section-title-large">Potensi Indonesia</h2>
-                    <p class="section-lead">Indonesia memiliki kekayaan potensi yang menjadi fondasi kekuatan bangsa dalam menghadapi dinamika global</p>
-                </div>
-                
-                <!-- Pancasila -->
-                <div class="content-block split-content">
-                    <div class="split-text">
-                        <h3 class="block-title">Pancasila: Ideologi Negara</h3>
-                        <p class="block-intro">Dasar negara, pandangan hidup, kekuatan pemersatu, dan sumber segala sumber hukum untuk mewujudkan masyarakat adil dan makmur sesuai amanat Pembukaan UUD NRI 1945.</p>
-                        
-                        <div class="principle-list">
-                            <div class="principle-item">
-                                <div class="principle-icon">●</div>
-                                <div class="principle-content">
-                                    <h4>Ketuhanan & Kemanusiaan</h4>
-                                    <p>Berdasar pada Tuhan dan kemanusiaan yang adil. Pemerintah wajib memelihara budi pekerti luhur.</p>
-                                </div>
-                            </div>
-                            <div class="principle-item">
-                                <div class="principle-icon">●</div>
-                                <div class="principle-content">
-                                    <h4>Persatuan</h4>
-                                    <p>Melindungi segenap bangsa dan mengatasi segala paham golongan atau individu.</p>
-                                </div>
-                            </div>
-                            <div class="principle-item">
-                                <div class="principle-icon">●</div>
-                                <div class="principle-content">
-                                    <h4>Kedaulatan Rakyat</h4>
-                                    <p>Berdiri di atas sistem kerakyatan dan permusyawaratan/perwakilan.</p>
-                                </div>
-                            </div>
-                            <div class="principle-item">
-                                <div class="principle-icon">●</div>
-                                <div class="principle-content">
-                                    <h4>Keadilan Ekonomi</h4>
-                                    <p>Mewujudkan keadilan sosial lewat kebersamaan, kemandirian, dan keseimbangan ekonomi nasional.</p>
-                                </div>
-                            </div>
-                        </div>
+                <header class="section-head">
+                    <span class="section-index" aria-hidden="true">01</span>
+                    <div class="section-head-body">
+                        <p class="kicker">Strengths</p>
+                        <h2 class="section-title" id="s-title">Kekuatan yang Dimiliki Bangsa Indonesia</h2>
+                        <p class="section-lead">Enam fondasi yang menjadikan Indonesia bukan sekadar negara besar, melainkan negara dengan pengaruh: ideologi, geografi, demografi, kebinekaan, sumber daya, dan pertahanan.</p>
                     </div>
-                    <div class="split-visual">
-                        <div class="visual-card garuda-card">
-                            <div class="visual-icon">★</div>
-                            <p class="visual-text">Dasar Negara<br>Republik Indonesia</p>
-                        </div>
-                    </div>
-                </div>
+                </header>
 
-                <!-- Geografis -->
-                <div class="content-block highlight-block">
-                    <div class="highlight-header">
-                        <h3 class="block-title">Geografis Indonesia: Poros Maritim Dunia</h3>
-                    </div>
-                    <div class="stats-showcase">
-                        <div class="stat-box primary">
-                            <div class="stat-number">17,000</div>
-                            <div class="stat-label">Pulau</div>
-                            <p class="stat-detail">Negara kepulauan terbesar di dunia</p>
-                        </div>
-                        <div class="stat-box">
-                            <div class="stat-number">93K km²</div>
-                            <div class="stat-label">Perairan</div>
-                        </div>
-                        <div class="stat-box">
-                            <div class="stat-number">81K km</div>
-                            <div class="stat-label">Panjang Pantai</div>
-                            <p class="stat-detail">25% pantai dunia</p>
-                        </div>
-                    </div>
-                    <div class="feature-grid-3">
-                        <div class="feature-box">
-                            <span class="feature-emoji">◆</span>
-                            <h4>Posisi Silang</h4>
-                            <p>Diapit 2 Benua (Asia & Australia) dan 2 Samudra (Pasifik & Hindia)</p>
-                        </div>
-                        <div class="feature-box">
-                            <span class="feature-emoji">◆</span>
-                            <h4>Jalur Ekonomi</h4>
-                            <p>Rute lintasan dan transit perdagangan internasional Asia Timur ke Afrika dan Eropa</p>
-                        </div>
-                        <div class="feature-box">
-                            <span class="feature-emoji">◆</span>
-                            <h4>Karakter Bangsa</h4>
-                            <p>"A Smiling Nation" – Ramah, toleran, damai, namun tetap gigih membela kedaulatan</p>
-                        </div>
-                    </div>
-                </div>
+                <!-- S1 · PANCASILA -->
+                <article class="entry reveal">
+                    <span class="entry-index" aria-hidden="true">S1</span>
+                    <div class="entry-main">
+                        <h3 class="entry-title">Pancasila &mdash; Ideologi Negara</h3>
+                        <p class="entry-dek">Dasar negara, pandangan hidup, kekuatan pemersatu, dan sumber segala sumber hukum untuk mewujudkan masyarakat adil dan makmur sesuai amanat Pembukaan UUD NRI 1945.</p>
 
-                <!-- Demografi & Kebinekaan -->
-                <div class="content-block asymmetric-layout">
-                    <div class="asym-large">
-                        <div class="big-stat-card">
-                            <span class="big-stat-label">Bonus Demografi</span>
-                            <div class="big-stat-number">270M+</div>
-                            <div class="big-stat-desc">Penduduk (#4 Dunia)</div>
-                            <div class="stat-points">
-                                <div class="stat-point">
-                                    <strong>Usia Produktif (15-64 tahun)</strong>
-                                    <p>Lonjakan hingga menjelang tahun 2040 (demographic dividend)</p>
-                                </div>
-                                <div class="stat-point">
-                                    <strong>Kelas Menengah</strong>
-                                    <p>Naik pesat dari 20% (2020) diproyeksikan melonjak jadi 49% (2030), memicu produktivitas ekonomi tinggi</p>
-                                </div>
+                        <div class="entry-body split">
+                            <div class="entry-text">
+                                <ul class="point-list">
+                                    <li>
+                                        <h4>Ketuhanan &amp; Kemanusiaan</h4>
+                                        <p>Berdasar pada Tuhan dan kemanusiaan yang adil. Pemerintah wajib memelihara budi pekerti luhur.</p>
+                                    </li>
+                                    <li>
+                                        <h4>Persatuan</h4>
+                                        <p>Melindungi segenap bangsa dan mengatasi segala paham golongan atau individu.</p>
+                                    </li>
+                                    <li>
+                                        <h4>Kedaulatan Rakyat</h4>
+                                        <p>Berdiri di atas sistem kerakyatan dan permusyawaratan/perwakilan.</p>
+                                    </li>
+                                    <li>
+                                        <h4>Keadilan Ekonomi</h4>
+                                        <p>Mewujudkan keadilan sosial lewat kebersamaan, kemandirian, dan keseimbangan ekonomi nasional.</p>
+                                    </li>
+                                </ul>
                             </div>
+                            <!-- PLACEHOLDER GAMBAR: ganti isi .media-frame dengan <img class="media-img" src="images/pancasila.jpg" alt="…"> -->
+                            <figure class="media">
+                               <img class="media-img" src="images/foto 2.jpg" alt="Garuda pancasila">
+                                <figcaption>Pancasila: dasar negara sekaligus sumber segala sumber hukum.</figcaption>
+                            </figure>
                         </div>
                     </div>
-                    <div class="asym-small">
-                        <h3 class="block-title compact">Keragaman Bangsa</h3>
-                        <div class="mini-stats">
-                            <div class="mini-stat-item">
-                                <div class="mini-stat-num">1,331</div>
-                                <div class="mini-stat-label">Suku Bangsa</div>
-                            </div>
-                            <div class="mini-stat-item">
-                                <div class="mini-stat-num">719</div>
-                                <div class="mini-stat-label">Bahasa Adat</div>
-                            </div>
-                            <div class="mini-stat-item">
-                                <div class="mini-stat-num">200</div>
-                                <div class="mini-stat-label">Produk Hukum Adat</div>
-                            </div>
-                        </div>
-                        <div class="insight-card">
-                            <strong>Modal Sosial:</strong> Keragaman melatih warga hidup damai dalam perbedaan, memberi kapasitas kuat untuk bergaul di kancah global.
-                        </div>
-                    </div>
-                </div>
+                </article>
 
-                <!-- SDA & Militer -->
-                <div class="two-col-layout">
-                    <div class="col-card">
-                        <h3 class="card-title">▸ Sumber Daya Alam</h3>
-                        <ul class="styled-list">
-                            <li>
-                                <strong>39,5 Juta Hektar</strong> hutan tropis yang menjaga keseimbangan iklim dunia
-                            </li>
-                            <li>
-                                <strong>80% Pasar Dunia</strong> pengekspor kayu lapis terbesar
-                            </li>
-                            <li>
-                                <strong>Kaya Tambang:</strong> Emas, tembaga, aspal, bijih besi, dan salah satu pemilik cadangan batu bara terbesar di dunia
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-card">
-                        <h3 class="card-title">▸ Kekuatan Militer</h3>
-                        <div class="rank-badges">
-                            <span class="badge-primary">#1 ASEAN</span>
-                            <span class="badge-primary">#14 DUNIA</span>
+                <!-- S2 · GEOGRAFIS -->
+                <article class="entry reveal">
+                    <span class="entry-index" aria-hidden="true">S2</span>
+                    <div class="entry-main">
+                        <h3 class="entry-title">Geografis Indonesia &mdash; Poros Maritim Dunia</h3>
+                        <p class="entry-dek">Negara kepulauan terbesar di dunia, berdiri di persimpangan dua benua dan dua samudra.</p>
+
+                        <div class="entry-body">
+                            <!-- PLACEHOLDER GAMBAR: ganti isi .media-frame dengan <img class="media-img" src="images/peta-maritim.jpg" alt="…"> -->
+                            <figure class="media media--wide">
+                               <img class="media-img" src="images/foto 3.png" alt="peta silang Indonesia">
+                                <figcaption>Posisi silang Indonesia: diapit Benua Asia&ndash;Australia dan Samudra Pasifik&ndash;Hindia.</figcaption>
+                            </figure>
+
+                            <div class="stat-row">
+                                <div class="stat-cell stat-cell--lead">
+                                    <span class="stat-figure">17.000</span>
+                                    <span class="stat-cap">Pulau</span>
+                                    <p class="stat-note">Negara kepulauan terbesar di dunia.</p>
+                                </div>
+                                <div class="stat-cell">
+                                    <span class="stat-figure">93 rb km&sup2;</span>
+                                    <span class="stat-cap">Perairan</span>
+                                </div>
+                                <div class="stat-cell">
+                                    <span class="stat-figure">81 rb km</span>
+                                    <span class="stat-cap">Panjang Pantai</span>
+                                    <p class="stat-note">25% pantai dunia.</p>
+                                </div>
+                            </div>
+
+                            <div class="feature-row">
+                                <div class="feature">
+                                    <span class="feature-index" aria-hidden="true">a</span>
+                                    <h4>Posisi Silang</h4>
+                                    <p>Diapit 2 Benua (Asia &amp; Australia) dan 2 Samudra (Pasifik &amp; Hindia).</p>
+                                </div>
+                                <div class="feature">
+                                    <span class="feature-index" aria-hidden="true">b</span>
+                                    <h4>Jalur Ekonomi</h4>
+                                    <p>Rute lintasan dan transit perdagangan internasional Asia Timur ke Afrika dan Eropa.</p>
+                                </div>
+                                <div class="feature">
+                                    <span class="feature-index" aria-hidden="true">c</span>
+                                    <h4>Karakter Bangsa</h4>
+                                    <p>&ldquo;A smiling nation&rdquo; &mdash; ramah, toleran, dan damai, namun tetap gigih membela kedaulatan.</p>
+                                </div>
+                            </div>
                         </div>
-                        <p class="rank-info">Power Index: <strong>0,3347</strong> (dari 133 negara)</p>
-                        <div class="rank-list">
-                            <div class="rank-item">
-                                <span class="rank-num">#2</span>
-                                <span>Potensi Lokasi Negara</span>
+                    </div>
+                </article>
+
+                <!-- S3 · DEMOGRAFI -->
+                <article class="entry reveal">
+                    <span class="entry-index" aria-hidden="true">S3</span>
+                    <div class="entry-main">
+                        <h3 class="entry-title">Bonus Demografi</h3>
+                        <p class="entry-dek">Jumlah penduduk terbesar nomor 4 di dunia, dengan lonjakan usia kerja yang melimpah hingga menjelang tahun 2040.</p>
+
+                        <div class="entry-body split">
+                            <div class="entry-text">
+                                <p class="big-figure">270<span> jt+</span></p>
+                                <ul class="point-list point-list--compact">
+                                    <li>
+                                        <h4>Usia Produktif</h4>
+                                        <p>Lonjakan usia kerja 15&ndash;64 tahun yang melimpah hingga menjelang 2040 (<em>demographic dividend</em>).</p>
+                                    </li>
+                                    <li>
+                                        <h4>Kelas Menengah</h4>
+                                        <p>Naik pesat dari 20% (2020) dan diproyeksikan melonjak menjadi 49% (2030), memicu produktivitas ekonomi tinggi.</p>
+                                    </li>
+                                </ul>
                             </div>
-                            <div class="rank-item">
-                                <span class="rank-num">#3</span>
-                                <span>Sumber Daya Manusia (personel)</span>
-                            </div>
-                            <div class="rank-item">
-                                <span class="rank-num">#4</span>
-                                <span>Sumber Daya Logistik dan Pendanaan</span>
+                            <!-- PLACEHOLDER GAMBAR: ganti isi .media-frame dengan <img class="media-img" src="images/demografi.jpg" alt="…"> -->
+                            <figure class="media">
+                               <img class="media-img" src="images/foto 4.jpg" alt="…">
+                                <figcaption>Keragaman usia produktif menjadi mesin ekonomi nasional.</figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- S4 · KEBINEKAAN -->
+                <article class="entry reveal">
+                    <span class="entry-index" aria-hidden="true">S4</span>
+                    <div class="entry-main">
+                        <h3 class="entry-title">Keragaman Bangsa &mdash; Kebinekaan</h3>
+                        <p class="entry-dek">Kekayaan budaya yang melatih warga hidup damai dalam perbedaan &mdash; modal sosial untuk bergaul di kancah global.</p>
+
+                        <div class="entry-body split split--reverse">
+                            <!-- PLACEHOLDER GAMBAR: ganti isi .media-frame dengan <img class="media-img" src="images/kebinekaan.jpg" alt="…"> -->
+                            <figure class="media">
+                                <img class="media-img" src="images/foto 5.jpg" alt="…">
+                                <figcaption>1.331 suku bangsa hidup berdampingan dalam satu negara.</figcaption>
+                            </figure>
+                            <div class="entry-text">
+                                <div class="mini-stat-row">
+                                    <div class="mini-stat">
+                                        <span class="mini-figure">1.331</span>
+                                        <span class="mini-cap">Suku Bangsa</span>
+                                    </div>
+                                    <div class="mini-stat">
+                                        <span class="mini-figure">719</span>
+                                        <span class="mini-cap">Bahasa Adat</span>
+                                    </div>
+                                    <div class="mini-stat">
+                                        <span class="mini-figure">200</span>
+                                        <span class="mini-cap">Produk Hukum Adat</span>
+                                    </div>
+                                </div>
+                                <aside class="note">
+                                    <span class="note-label">Modal Sosial</span>
+                                    Keragaman melatih warga hidup damai dalam perbedaan, memberi kapasitas kuat untuk bergaul di kancah global.
+                                </aside>
                             </div>
                         </div>
                     </div>
+                </article>
+
+                <!-- S5 · SDA -->
+                <article class="entry reveal">
+                    <span class="entry-index" aria-hidden="true">S5</span>
+                    <div class="entry-main">
+                        <h3 class="entry-title">Sumber Daya Alam</h3>
+                        <p class="entry-dek">Kekayaan alam yang tidak hanya menopang ekonomi nasional, tetapi juga menjaga keseimbangan iklim dunia.</p>
+
+                        <div class="entry-body split">
+                            <div class="entry-text">
+                                <ul class="point-list">
+                                    <li>
+                                        <h4>Hutan &amp; Biodiversitas</h4>
+                                        <p>Hutan tropis seluas <strong>39.549.447 hektar</strong> yang menjaga keseimbangan iklim dunia.</p>
+                                    </li>
+                                    <li>
+                                        <h4>Kayu Lapis</h4>
+                                        <p>Pengekspor <em>plywood</em> terbesar dengan menguasai <strong>80% pasar dunia</strong>.</p>
+                                    </li>
+                                    <li>
+                                        <h4>Tambang &amp; Energi</h4>
+                                        <p>Kaya akan emas, tembaga, aspal, bijih besi, dan salah satu pemilik cadangan batu bara terbesar di dunia.</p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- PLACEHOLDER GAMBAR: ganti isi .media-frame dengan <img class="media-img" src="images/sda.jpg" alt="…"> -->
+                            <figure class="media">
+                               <img class="media-img" src="images/foto 6.jpg" alt="…">
+                                <figcaption>Hutan tropis Indonesia menopang keseimbangan iklim dunia.</figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- S6 · MILITER -->
+                <article class="entry reveal">
+                    <span class="entry-index" aria-hidden="true">S6</span>
+                    <div class="entry-main">
+                        <h3 class="entry-title">Kekuatan Militer Indonesia</h3>
+                        <p class="entry-dek">Peringkat ke&#8209;1 di ASEAN dan ke&#8209;14 di dunia dari 133 negara &mdash; Power Index 0,3347 (Global Fire Power, 2017).</p>
+
+                        <div class="entry-body split">
+                            <div class="entry-text">
+                                <div class="rank-row">
+                                    <div class="rank-cell">
+                                        <span class="rank-figure">#1</span>
+                                        <span class="rank-cap">ASEAN</span>
+                                    </div>
+                                    <div class="rank-cell">
+                                        <span class="rank-figure">#14</span>
+                                        <span class="rank-cap">Dunia</span>
+                                    </div>
+                                </div>
+                                <ul class="point-list point-list--rank">
+                                    <li>
+                                        <h4><span class="rank-tag">#2</span> Potensi Lokasi Negara</h4>
+                                    </li>
+                                    <li>
+                                        <h4><span class="rank-tag">#3</span> Sumber Daya Manusia (personel)</h4>
+                                    </li>
+                                    <li>
+                                        <h4><span class="rank-tag">#4</span> Sumber Daya Logistik dan Pendanaan</h4>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- PLACEHOLDER GAMBAR: ganti isi .media-frame dengan <img class="media-img" src="images/militer.jpg" alt="…"> -->
+                            <figure class="media">
+                                <img class="media-img" src="images/foto 7.jpg" alt="…">
+                                <figcaption>Kekuatan maritim menopang peringkat militer Indonesia di ASEAN.</figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- ══════════════════ 02 · KELEMAHAN (W) ══════════════════ -->
+        <section class="section section--alt" id="kelemahan" aria-labelledby="w-title">
+            <div class="container">
+                <header class="section-head">
+                    <span class="section-index" aria-hidden="true">02</span>
+                    <div class="section-head-body">
+                        <p class="kicker">Weaknesses</p>
+                        <h2 class="section-title" id="w-title">Kelemahan Indonesia dalam Penerapan Pancasila</h2>
+                        <aside class="def-block">
+                            <span class="note-label">Definisi Kelemahan</span>
+                            <p>Kondisi internal/masalah dalam negeri yang menghambat perkembangan maksimal dan penerapan nilai Pancasila di kancah global.</p>
+                        </aside>
+                    </div>
+                </header>
+
+                <div class="weak-list">
+                    <article class="weak-row reveal">
+                        <span class="weak-index" aria-hidden="true">W1</span>
+                        <div class="weak-main">
+                            <h3>Sumber Daya Manusia (SDM) Rendah</h3>
+                            <p>Nilai HCI Indonesia sebesar 0,54, tertinggal dari Malaysia dan Vietnam. Pasar kerja didominasi tenaga berkeahlian rendah.</p>
+                            <aside class="note">
+                                <span class="note-label">Definisi HCI</span>
+                                Ukuran kualitas modal manusia dari aspek pendidikan &amp; kesehatan terhadap produktivitas.
+                            </aside>
+                        </div>
+                        <p class="weak-stat"><span class="weak-figure">0,54</span><span class="weak-cap">Nilai HCI Indonesia</span></p>
+                    </article>
+
+                    <article class="weak-row reveal">
+                        <span class="weak-index" aria-hidden="true">W2</span>
+                        <div class="weak-main">
+                            <h3>Pembangunan Tidak Merata</h3>
+                            <p>Masih bersifat Jawa&#8209;sentris. Dari total PDB 2018 (Rp14.837 Triliun), Pulau Jawa mendominasi perekonomian sebesar 58,48%.</p>
+                            <!-- PLACEHOLDER GAMBAR: ganti isi .media-frame dengan <img class="media-img" src="images/…" alt="…"> -->
+                            <figure class="media media--wide">
+                               <img class="media-img" src="images/foto 8.jpg" alt="…">
+                                <figcaption>Pemerataan pembangunan antarwilayah Indonesia.</figcaption>
+                            </figure>
+                        </div>
+                        <p class="weak-stat"><span class="weak-figure">58,48%</span><span class="weak-cap">PDB dikuasai Pulau Jawa</span></p>
+                    </article>
+
+                    <article class="weak-row reveal">
+                        <span class="weak-index" aria-hidden="true">W3</span>
+                        <div class="weak-main">
+                            <h3>Kesenjangan Ekonomi</h3>
+                            <p>Ketimpangan pendapatan tinggi &mdash; 1% warga menguasai hampir separuh aset. Bank Dunia mencatat Indeks Gini naik dari 30,0 (1990&#8209;an) menjadi 39,0 (2017).</p>
+                            <!-- PLACEHOLDER GAMBAR: ganti isi .media-frame dengan <img class="media-img" src="images/…" alt="…"> -->
+                            <figure class="media media--wide">
+                               <img class="media-img" src="images/foto 9.jpg" alt="…">
+                                <figcaption>Jarak konsumsi kelompok teratas dan terbawah.</figcaption>
+                            </figure>
+                        </div>
+                        <p class="weak-stat"><span class="weak-figure">39,0</span><span class="weak-cap">Indeks Gini (2017)</span></p>
+                    </article>
+
+                    <article class="weak-row reveal">
+                        <span class="weak-index" aria-hidden="true">W4</span>
+                        <div class="weak-main">
+                            <h3>Pengelolaan SDA Belum Maksimal</h3>
+                            <p>Potensi alam hayati dan non&#8209;hayati belum dikelola penuh. Contohnya, potensi laut senilai Rp17 ribu triliun per tahun belum optimal.</p>
+                        </div>
+                        <p class="weak-stat"><span class="weak-figure">Rp17.000 T</span><span class="weak-cap">Potensi laut / tahun</span></p>
+                    </article>
+
+                    <article class="weak-row reveal">
+                        <span class="weak-index" aria-hidden="true">W5</span>
+                        <div class="weak-main">
+                            <h3>Korupsi Masih Merajalela</h3>
+                            <p>Tren kerugian negara naik tajam. Data ICW mencatat korupsi Rp29,4 Triliun (2021), dan akumulasi KPK tembus Rp168 Triliun (2004&ndash;2019).</p>
+                            <!-- PLACEHOLDER GAMBAR: ganti isi .media-frame dengan <img class="media-img" src="images/…" alt="…"> -->
+                            <figure class="media media--wide">
+                               <img class="media-img" src="images/foto 10.jpg" alt="…">
+                                <figcaption>Pencegahan dan pemulihan aset negara.</figcaption>
+                            </figure>
+                        </div>
+                        <p class="weak-stat"><span class="weak-figure">Rp29,4 T</span><span class="weak-cap">Kerugian negara 2021 (ICW)</span></p>
+                    </article>
+
+                    <article class="weak-row reveal">
+                        <span class="weak-index" aria-hidden="true">W6</span>
+                        <div class="weak-main">
+                            <h3>Pungutan Liar (Pungli) Masih Terjadi</h3>
+                            <p>Ribuan OTT merusak layanan publik. Instansi paling rawan (2015): Pemda (33%), Lembaga Pendidikan (13%), dan Kepolisian (7%).</p>
+                        </div>
+                        <p class="weak-stat"><span class="weak-figure">33%</span><span class="weak-cap">Rawan di pemda (2015)</span></p>
+                    </article>
+
+                    <article class="weak-row reveal">
+                        <span class="weak-index" aria-hidden="true">W7</span>
+                        <div class="weak-main">
+                            <h3>Tingginya Risiko Bencana Alam</h3>
+                            <p>Terletak di jalur gempa aktif dan gunung berapi. Pada 2022, tercatat ada 3.544 bencana alam yang merusak infrastruktur ekonomi.</p>
+                            <!-- PLACEHOLDER GAMBAR: ganti isi .media-frame dengan <img class="media-img" src="images/…" alt="…"> -->
+                            <figure class="media media--wide">
+                               <img class="media-img" src="images/foto 11.jpg" alt="…">
+                                <figcaption>Indonesia berada di jalur gempa dan gunung berapi aktif.</figcaption>
+                            </figure>
+                        </div>
+                        <p class="weak-stat"><span class="weak-figure">3.544</span><span class="weak-cap">Bencana sepanjang 2022</span></p>
+                    </article>
                 </div>
             </div>
         </section>
 
-        <!-- Peluang -->
-        <section id="peluang" class="section section-alt">
+        <!-- ══════════════════ 03 · PELUANG (O) ══════════════════ -->
+        <section class="section" id="peluang" aria-labelledby="o-title">
             <div class="container">
-                <div class="section-intro">
-                    <span class="section-label">02 — Kesempatan Emas</span>
-                    <h2 class="section-title-large">Peluang Indonesia</h2>
-                    <p class="section-lead">Kesempatan atau potensi menguntungkan untuk memajukan kesejahteraan, ekonomi, dan pengaruh internasional</p>
-                </div>
-
-                <!-- Ekonomi #7 -->
-                <div class="featured-opportunity">
-                    <div class="opp-content">
-                        <div class="opp-badge">Target 2030</div>
-                        <h3 class="opp-title">Ekonomi #7 Dunia</h3>
-                        <div class="opp-rank">#7</div>
-                        <p class="opp-desc">Prediksi McKinsey (2012) menyatakan Indonesia berpeluang menjadi raksasa ekonomi ke-7 dunia pada 2030.</p>
-                        <div class="requirement-box">
-                            <strong>Syarat:</strong> Harus meningkatkan SDM, produktivitas, pemerataan ekonomi, dan infrastruktur
-                        </div>
+                <header class="section-head">
+                    <span class="section-index" aria-hidden="true">03</span>
+                    <div class="section-head-body">
+                        <p class="kicker">Opportunities</p>
+                        <h2 class="section-title" id="o-title">Peluang Bangsa dan Negara Indonesia</h2>
+                        <aside class="def-block">
+                            <span class="note-label">Definisi Peluang</span>
+                            <p>Kesempatan atau potensi menguntungkan (internal/eksternal) untuk memajukan kesejahteraan, ekonomi, dan pengaruh internasional.</p>
+                        </aside>
                     </div>
-                </div>
+                </header>
 
-                <!-- Other Opportunities -->
-                <div class="opportunities-grid">
-                    <div class="opp-card">
-                        <span class="opp-icon">▣</span>
-                        <h4>Kemajuan Iptek & Teknologi Informasi</h4>
+                <!-- O1 · SPREAD UTAMA -->
+                <article class="spread reveal">
+                    <div class="spread-text">
+                        <p class="kicker">Prediksi McKinsey, 2012</p>
+                        <h3 class="spread-title">Kekuatan Ekonomi ke&#8209;7 Dunia pada 2030</h3>
+                        <p class="spread-desc">Indonesia berpeluang menjadi raksasa ekonomi ke&#8209;7 dunia pada 2030 &mdash; asalkan syaratnya dipenuhi.</p>
+                        <aside class="note note--dark">
+                            <span class="note-label">Syarat</span>
+                            Harus meningkatkan SDM, produktivitas, pemerataan ekonomi, dan infrastruktur.
+                        </aside>
+                    </div>
+                    <p class="spread-rank" aria-label="Peringkat tujuh dunia">#7<span>Target 2030</span></p>
+                </article>
+
+                <!-- PLACEHOLDER GAMBAR: ganti isi .media-frame dengan <img class="media-img" src="images/ekonomi-2030.jpg" alt="…"> -->
+                <figure class="media media--wide reveal">
+                   <img class="media-img" src="images/foto 12.jpg" alt="…">
+                    <figcaption>Menuju 2030: pertumbuhan ekonomi menuntut kesiapan SDM, produktivitas, pemerataan, dan infrastruktur.</figcaption>
+                </figure>
+
+                <div class="opp-grid">
+                    <!-- O2 -->
+                    <article class="opp reveal">
+                        <span class="opp-index" aria-hidden="true">O2</span>
+                        <h3>Kemajuan Iptek &amp; Teknologi Informasi</h3>
                         <p>Teknologi informasi membuka wawasan global masyarakat dan memberikan keterampilan penting untuk bersaing secara internasional.</p>
-                    </div>
+                    </article>
 
-                    <div class="opp-card">
-                        <span class="opp-icon">▣</span>
-                        <h4>Magnet Investasi Sumber Daya Alam</h4>
+                    <!-- O3 -->
+                    <article class="opp reveal">
+                        <span class="opp-index" aria-hidden="true">O3</span>
+                        <h3>Magnet Investasi Sumber Daya Alam</h3>
                         <p>Kekayaan alam yang melimpah menjadi daya tarik utama bagi investor asing untuk menanamkan modal guna mendongkrak ekonomi nasional.</p>
-                        <div class="definition-box">
-                            <strong>→</strong> <strong>Investasi:</strong> Penanaman modal jangka panjang demi keuntungan di masa depan
-                        </div>
-                    </div>
+                        <aside class="note">
+                            <span class="note-label">Definisi Investasi</span>
+                            Penanaman modal jangka panjang demi keuntungan di masa depan.
+                        </aside>
+                    </article>
 
-                    <div class="opp-card highlight-card">
-                        <span class="opp-icon">▣</span>
-                        <h4>Pariwisata Global dari Kekayaan Budaya</h4>
-                        <p>Keragaman budaya dan alam memicu lonjakan turis asing, menjadikannya pilar utama penghasil devisa.</p>
-                        <div class="data-growth">
-                            <div class="growth-item">
-                                <strong>US$ 525,18 juta</strong>
-                                <span>Investasi hotel (2018)</span>
+                    <!-- O4 -->
+                    <article class="opp opp--wide reveal">
+                        <div class="opp-text">
+                            <span class="opp-index" aria-hidden="true">O4</span>
+                            <h3>Pariwisata Global dari Kekayaan Budaya</h3>
+                            <p>Keragaman budaya dan alam memicu lonjakan turis asing, menjadikannya pilar utama penghasil devisa.</p>
+                            <div class="growth-row">
+                                <div class="growth-cell">
+                                    <span class="growth-figure">US$ 525,18 jt</span>
+                                    <span class="growth-cap">Investasi hotel bintang (2018)</span>
+                                </div>
+                                <div class="growth-cell">
+                                    <span class="growth-figure">8,8 &rarr; 15,8 jt</span>
+                                    <span class="growth-cap">Turis asing (2013&ndash;2018)</span>
+                                </div>
                             </div>
-                            <div class="growth-arrow">→</div>
-                            <div class="growth-item">
-                                <strong>8,8M → 15,8M</strong>
-                                <span>Turis (2013-2018)</span>
-                            </div>
+                            <aside class="note">
+                                <span class="note-label">Definisi PMA</span>
+                                Penanaman Modal Asing &mdash; kegiatan investasi oleh pihak luar negeri di wilayah Indonesia.
+                            </aside>
                         </div>
-                        <div class="definition-box">
-                            <strong>→</strong> <strong>PMA:</strong> Penanaman Modal Asing oleh pihak luar negeri di wilayah Indonesia
-                        </div>
-                    </div>
+                        <!-- PLACEHOLDER GAMBAR: ganti isi .media-frame dengan <img class="media-img" src="images/pariwisata.jpg" alt="…"> -->
+                        <figure class="media">
+                           <img class="media-img" src="images/foto 13.jpg" alt="…">
+                            <figcaption>Wisata budaya dan alam sebagai pilar devisa nasional.</figcaption>
+                        </figure>
+                    </article>
 
-                    <div class="opp-card highlight-card">
-                        <span class="opp-icon">▣</span>
-                        <h4>Pusat Industri Halal Dunia</h4>
-                        <p>Berbekal predikat penduduk Muslim terbesar di dunia, Indonesia berpeluang memimpin pasar gaya hidup halal global yang pasarnya melejit.</p>
-                        <div class="mega-stat">
-                            <div class="mega-number">$3.007T</div>
-                            <div class="mega-label">Proyeksi pendapatan industri halal global (2023)</div>
+                    <!-- O5 -->
+                    <article class="opp opp--wide reveal">
+                        <div class="opp-text">
+                            <span class="opp-index" aria-hidden="true">O5</span>
+                            <h3>Pusat Industri Halal Dunia</h3>
+                            <p>Berbekal predikat penduduk Muslim terbesar di dunia, Indonesia berpeluang memimpin pasar gaya hidup halal global yang pasarnya melejit.</p>
+                            <p class="mega"><span class="mega-figure">$3.007 triliun</span><span class="mega-cap">Proyeksi pendapatan industri halal global (2023)</span></p>
+                            <aside class="note">
+                                <span class="note-label">Definisi Gaya Hidup &amp; Industri Halal</span>
+                                Tren global mengonsumsi produk/jasa sesuai syariat Islam seperti makanan, busana, kosmetik, dan pariwisata.
+                            </aside>
                         </div>
-                        <div class="definition-box">
-                            <strong>→</strong> <strong>Gaya Hidup & Industri Halal:</strong> Tren global mengonsumsi produk/jasa sesuai syariat Islam seperti makanan, busana, kosmetik, dan pariwisata
-                        </div>
-                    </div>
+                        <blockquote class="pullquote">
+                            <p>Pasar halal dunia bukan lagi ceruk &mdash; ia menjadi arus utama ekonomi global.</p>
+                        </blockquote>
+                    </article>
                 </div>
             </div>
         </section>
 
-        <!-- Tantangan -->
-        <section id="tantangan" class="section">
+        <!-- ══════════════════ 04 · TANTANGAN (T) ══════════════════ -->
+        <section class="section section--alt" id="tantangan" aria-labelledby="t-title">
             <div class="container">
-                <div class="section-intro">
-                    <span class="section-label warning">03 — Ujian Bangsa</span>
-                    <h2 class="section-title-large">Tantangan di Era Global</h2>
-                    <p class="section-lead">Kondisi eksternal maupun internal yang menuntut kesiapan, ketahanan nasional, dan penyikapan tegas agar nilai-nilai Pancasila tidak tergerus</p>
-                </div>
+                <header class="section-head">
+                    <span class="section-index" aria-hidden="true">04</span>
+                    <div class="section-head-body">
+                        <p class="kicker">Threats</p>
+                        <h2 class="section-title" id="t-title">Tantangan Indonesia dalam Penerapan Pancasila di Era Global</h2>
+                        <aside class="def-block">
+                            <span class="note-label">Definisi Tantangan</span>
+                            <p>Kondisi eksternal maupun internal di era keterbukaan dunia yang menuntut kesiapan, ketahanan nasional, dan penyikapan tegas dari bangsa Indonesia agar nilai&#8209;nilai Pancasila tidak tergerus.</p>
+                        </aside>
+                        <aside class="def-block">
+                            <span class="note-label">Definisi Globalisasi</span>
+                            <p>Era di mana ruang dan waktu antaranegara saling terhubung, memungkinkan individu di seluruh dunia berinteraksi, berkomunikasi, dan bertukar pengaruh secara bebas.</p>
+                        </aside>
+                    </div>
+                </header>
 
-                <div class="definition-banner">
-                    <strong>● Globalisasi:</strong> Era di mana ruang dan waktu antaranegara saling terhubung, memungkinkan individu di seluruh dunia berinteraksi, berkomunikasi, dan bertukar pengaruh secara bebas
-                </div>
-
-                <!-- Tantangan Teknologi -->
-                <div class="challenge-section">
-                    <h3 class="challenge-section-title">Tantangan Teknologi & Informasi</h3>
+                <!-- Sub-bab 1 -->
+                <div class="sub-block">
+                    <h3 class="sub-title"><span class="sub-num" aria-hidden="true">1</span> Tantangan Umum Pemanfaatan Teknologi &amp; Informasi</h3>
                     <div class="challenge-grid">
-                        <div class="challenge-card">
-                            <div class="challenge-badge">⚠</div>
+                        <article class="challenge reveal">
+                            <span class="challenge-index" aria-hidden="true">T&#8209;1a</span>
                             <h4>Masuknya Ideologi Luar</h4>
-                            <p>Masuknya paham konsumerisme, radikalisme, dan terorisme internasional yang memicu pola pikir eksklusif, intoleran, hingga perilaku destruktif</p>
-                        </div>
-
-                        <div class="challenge-card">
-                            <div class="challenge-badge">⚠</div>
+                            <p>Masuknya paham konsumerisme, radikalisme, dan terorisme internasional yang memicu pola pikir eksklusif, intoleran, hingga perilaku destruktif.</p>
+                        </article>
+                        <article class="challenge reveal">
+                            <span class="challenge-index" aria-hidden="true">T&#8209;1b</span>
                             <h4>Ancaman Kedaulatan Data Pribadi</h4>
-                            <p>Adanya eksploitasi data pribadi warga negara (seperti NIK, identitas diri, lokasi) di media sosial oleh pihak tak bertanggung jawab</p>
-                            <div class="def-small">
-                                <strong>→</strong> <strong>Keamanan Siber:</strong> Upaya perlindungan sistem, jaringan, dan data digital dari ancaman atau akses ilegal
-                            </div>
-                        </div>
-
-                        <div class="challenge-card">
-                            <div class="challenge-badge">⚠</div>
-                            <h4>Penyeragaman Budaya (Globalisasi Budaya)</h4>
-                            <p>Dominasi budaya dunia (seperti Hollywood dan K-pop) yang membuat kebanggaan generasi muda terhadap budaya dan bahasa Indonesia sendiri makin berkurang</p>
-                        </div>
-
-                        <div class="challenge-card">
-                            <div class="challenge-badge">⚠</div>
+                            <p>Adanya eksploitasi data pribadi warga negara (seperti NIK, identitas diri, lokasi) di media sosial oleh pihak tak bertanggung jawab.</p>
+                            <aside class="note">
+                                <span class="note-label">Definisi Keamanan Siber</span>
+                                Upaya perlindungan sistem, jaringan, dan data digital dari ancaman atau akses ilegal.
+                            </aside>
+                        </article>
+                        <article class="challenge reveal">
+                            <span class="challenge-index" aria-hidden="true">T&#8209;1c</span>
+                            <h4>Penyeragaman Budaya</h4>
+                            <p>Dominasi budaya dunia (seperti Hollywood dan K&#8209;pop) yang membuat kebanggaan generasi muda terhadap budaya dan bahasa Indonesia sendiri makin berkurang.</p>
+                        </article>
+                        <article class="challenge reveal">
+                            <span class="challenge-index" aria-hidden="true">T&#8209;1d</span>
                             <h4>Stigma Negatif Global</h4>
-                            <p>Masih adanya pandangan stereotip di dunia internasional bahwa Indonesia adalah negara terbelakang dan miskin</p>
-                        </div>
+                            <p>Masih adanya pandangan stereotip di dunia internasional bahwa Indonesia adalah negara terbelakang dan miskin.</p>
+                        </article>
                     </div>
                 </div>
 
-                <!-- Tantangan Ideologi -->
-                <div class="challenge-section">
-                    <h3 class="challenge-section-title">Tantangan Paham & Ideologi Global</h3>
-                    <div class="accordion-container">
-                        <div class="accordion-card">
-                            <div class="accordion-trigger">
-                                <div class="acc-num">01</div>
-                                <h4>Individualisme</h4>
-                                <span class="acc-icon">+</span>
-                            </div>
-                            <div class="accordion-body">
-                                <p><strong>Inti:</strong> Hak pribadi diutamakan di atas kepentingan bersama, sering menunggangi isu HAM sehingga merusak budaya gotong royong</p>
-                                <div class="def-small">
-                                    <strong>→</strong> <strong>Definisi:</strong> Paham bahwa kepentingan diri sendiri lebih penting daripada orang lain
+                <!-- Sub-bab 2 -->
+                <div class="sub-block">
+                    <h3 class="sub-title"><span class="sub-num" aria-hidden="true">2</span> Tantangan di Era Global</h3>
+                    <p class="sub-lead">Lima paham global yang paling sering menggerus nilai&#8209;nilai Pancasila dalam kehidupan sehari&#8209;hari.</p>
+
+                    <div class="acc" id="acc">
+                        <div class="acc-item">
+                            <button class="acc-trigger" aria-expanded="false" aria-controls="acc-panel-1">
+                                <span class="acc-index" aria-hidden="true">01</span>
+                                <span class="acc-title">Menguatnya Individualisme</span>
+                                <span class="acc-icon" aria-hidden="true"></span>
+                            </button>
+                            <div class="acc-panel" id="acc-panel-1" role="region">
+                                <div class="acc-inner">
+                                    <p><strong>Inti:</strong> Hak pribadi diutamakan di atas kepentingan bersama, sering menunggangi isu HAM sehingga merusak budaya gotong royong.</p>
+                                    <aside class="note">
+                                        <span class="note-label">Definisi Individualisme</span>
+                                        Paham bahwa kepentingan diri sendiri lebih penting daripada orang lain.
+                                    </aside>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="accordion-card">
-                            <div class="accordion-trigger">
-                                <div class="acc-num">02</div>
-                                <h4>Kosmopolitanisme</h4>
-                                <span class="acc-icon">+</span>
-                            </div>
-                            <div class="accordion-body">
-                                <p><strong>Inti:</strong> Mendorong tatanan manusia seragam secara global, yang berisiko mengikis cinta tanah air dan identitas kebangsaan</p>
-                                <div class="def-small">
-                                    <strong>→</strong> <strong>Definisi:</strong> Ideologi bahwa seluruh manusia adalah satu komunitas global tanpa sekat negara
+                        <div class="acc-item">
+                            <button class="acc-trigger" aria-expanded="false" aria-controls="acc-panel-2">
+                                <span class="acc-index" aria-hidden="true">02</span>
+                                <span class="acc-title">Kosmopolitanisme</span>
+                                <span class="acc-icon" aria-hidden="true"></span>
+                            </button>
+                            <div class="acc-panel" id="acc-panel-2" role="region">
+                                <div class="acc-inner">
+                                    <p><strong>Inti:</strong> Mendorong tatanan manusia seragam secara global, yang berisiko mengikis cinta tanah air dan identitas kebangsaan.</p>
+                                    <aside class="note">
+                                        <span class="note-label">Definisi Kosmopolitanisme</span>
+                                        Ideologi bahwa seluruh manusia adalah satu komunitas global tanpa sekat negara.
+                                    </aside>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="accordion-card">
-                            <div class="accordion-trigger">
-                                <div class="acc-num">03</div>
-                                <h4>Fundamentalisme Pasar</h4>
-                                <span class="acc-icon">+</span>
-                            </div>
-                            <div class="accordion-body">
-                                <p><strong>Penjelasan:</strong> Menurut Harry B. Priyono, paham ini menjadikan mekanisme pasar (transaksi jual-beli) sebagai satu-satunya prinsip pengatur pemenuhan kebutuhan masyarakat. Paham ini menuntut kebebasan individu mutlak dalam ekonomi dan menolak peran atau campur tangan negara dalam mengatur harga bahan pokok rakyat.</p>
-                                <div class="def-small">
-                                    <strong>→</strong> <strong>Definisi:</strong> Paham ekonomi yang memperjuangkan pasar bebas secara mendasar tanpa kompromi
+                        <div class="acc-item">
+                            <button class="acc-trigger" aria-expanded="false" aria-controls="acc-panel-3">
+                                <span class="acc-index" aria-hidden="true">03</span>
+                                <span class="acc-title">Fundamentalisme Pasar</span>
+                                <span class="acc-icon" aria-hidden="true"></span>
+                            </button>
+                            <div class="acc-panel" id="acc-panel-3" role="region">
+                                <div class="acc-inner">
+                                    <p><strong>Penjelasan:</strong> Menurut Harry B. Priyono, paham ini menjadikan mekanisme pasar (transaksi jual&#8209;beli) sebagai satu&#8209;satunya prinsip pengatur pemenuhan kebutuhan masyarakat. Paham ini menuntut kebebasan individu mutlak dalam ekonomi dan menolak peran atau campur tangan negara dalam mengatur harga bahan pokok rakyat.</p>
+                                    <aside class="note">
+                                        <span class="note-label">Definisi Fundamentalisme Pasar</span>
+                                        Paham ekonomi yang memperjuangkan pasar bebas secara mendasar tanpa kompromi.
+                                    </aside>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="accordion-card">
-                            <div class="accordion-trigger">
-                                <div class="acc-num">04</div>
-                                <h4>Radikalisme</h4>
-                                <span class="acc-icon">+</span>
-                            </div>
-                            <div class="accordion-body">
-                                <p><strong>Penjelasan:</strong> Paham keagamaan yang salah arah dengan menuntut ketaatan mutlak secara kaku, eksklusif, militan, menyangkal moralitas di luar kelompoknya, serta membenarkan segala tindakan (termasuk kekerasan/korban jiwa) demi tegaknya penafsiran sepihak.</p>
-                                <div class="def-small">
-                                    <strong>→</strong> <strong>Definisi:</strong> Paham atau aliran yang hendak mengubah tatanan kehidupan masyarakat secara mendasar dan mengakar dengan cara kekerasan
+                        <div class="acc-item">
+                            <button class="acc-trigger" aria-expanded="false" aria-controls="acc-panel-4">
+                                <span class="acc-index" aria-hidden="true">04</span>
+                                <span class="acc-title">Radikalisme</span>
+                                <span class="acc-icon" aria-hidden="true"></span>
+                            </button>
+                            <div class="acc-panel" id="acc-panel-4" role="region">
+                                <div class="acc-inner">
+                                    <p><strong>Penjelasan:</strong> Paham keagamaan yang salah arah dengan menuntut ketaatan mutlak secara kaku, eksklusif, militan, menyangkal moralitas di luar kelompoknya, serta membenarkan segala tindakan (termasuk kekerasan/korban jiwa) demi tegaknya penafsiran sepihak.</p>
+                                    <aside class="note">
+                                        <span class="note-label">Definisi Radikalisme</span>
+                                        Paham atau aliran yang hendak mengubah tatanan kehidupan masyarakat secara mendasar dan mengakar dengan cara kekerasan.
+                                    </aside>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="accordion-card">
-                            <div class="accordion-trigger">
-                                <div class="acc-num">05</div>
-                                <h4>Intoleransi</h4>
-                                <span class="acc-icon">+</span>
-                            </div>
-                            <div class="accordion-body">
-                                <p><strong>Penjelasan:</strong> Keadaan di mana seseorang/kelompok memaksakan keyakinannya dan menolak mengakui hak-hak kelompok lain yang berbeda. Di Indonesia, hal ini dipicu oleh empat faktor: sikap memungkiri kemajemukan, kepentingan politik praktis menggunakan agama, kemiskinan/rendahnya pendidikan, serta kurangnya dialog cerdas.</p>
-                                <div class="def-small">
-                                    <strong>→</strong> <strong>Definisi:</strong> Sikap atau perilaku tidak tenggang rasa dan tidak menghargai perbedaan pendapat, kepercayaan, atau latar belakang orang lain
+                        <div class="acc-item">
+                            <button class="acc-trigger" aria-expanded="false" aria-controls="acc-panel-5">
+                                <span class="acc-index" aria-hidden="true">05</span>
+                                <span class="acc-title">Intoleransi</span>
+                                <span class="acc-icon" aria-hidden="true"></span>
+                            </button>
+                            <div class="acc-panel" id="acc-panel-5" role="region">
+                                <div class="acc-inner">
+                                    <p><strong>Penjelasan:</strong> Keadaan di mana seseorang/kelompok memaksakan keyakinannya dan menolak mengakui hak&#8209;hak kelompok lain yang berbeda. Di Indonesia, hal ini dipicu oleh empat faktor: sikap memungkiri kemajemukan, kepentingan politik praktis menggunakan agama, kemiskinan/rendahnya pendidikan, serta kurangnya dialog cerdas.</p>
+                                    <aside class="note">
+                                        <span class="note-label">Definisi Intoleransi</span>
+                                        Sikap atau perilaku tidak tenggang rasa dan tidak menghargai perbedaan pendapat, kepercayaan, atau latar belakang orang lain.
+                                    </aside>
                                 </div>
                             </div>
                         </div>
@@ -435,201 +722,103 @@
             </div>
         </section>
 
-        <!-- Kelemahan -->
-        <section id="kelemahan" class="section section-alt">
+        <!-- ══════════════════ KESIMPULAN ══════════════════ -->
+        <section class="section conclusion" id="kesimpulan" aria-labelledby="conclusion-title">
             <div class="container">
-                <div class="section-intro">
-                    <span class="section-label" style="color: #DC2626;">04 — Hambatan Internal</span>
-                    <h2 class="section-title-large">Kelemahan Indonesia</h2>
-                    <p class="section-lead">Kondisi internal/masalah dalam negeri yang menghambat perkembangan maksimal dan penerapan nilai Pancasila di kancah global</p>
-                </div>
-                
-                <div class="weakness-modern-grid">
-                    <div class="weakness-modern-card critical">
-                        <div class="weak-indicator"></div>
-                        <div class="weak-number">01</div>
-                        <h4>SDM Rendah</h4>
-                        <div class="weak-stat">HCI: 0.54</div>
-                        <p>Tertinggal dari Malaysia & Vietnam. Pasar kerja didominasi tenaga berkeahlian rendah.</p>
-                        <div class="def-small"><strong>→</strong> <strong>HCI:</strong> Ukuran kualitas modal manusia dari aspek pendidikan & kesehatan terhadap produktivitas</div>
+                <header class="section-head section-head--plain">
+                    <div class="section-head-body">
+                        <p class="kicker">Penutup</p>
+                        <h2 class="section-title" id="conclusion-title">Kesimpulan</h2>
                     </div>
+                </header>
 
-                    <div class="weakness-modern-card high">
-                        <div class="weak-indicator"></div>
-                        <div class="weak-number">02</div>
-                        <h4>Pembangunan Tidak Merata</h4>
-                        <div class="weak-stat">58.48%</div>
-                        <p>Masih bersifat Jawa-sentris. Dari total PDB 2018 (Rp14.837 Triliun), Pulau Jawa mendominasi perekonomian.</p>
+                <p class="conclusion-text reveal">Indonesia memiliki <strong>potensi dan peluang besar</strong> untuk menjadi negara maju di era global. Namun, berbagai <strong>tantangan eksternal</strong> dan <strong>kelemahan internal</strong> harus diatasi dengan penerapan nilai&#8209;nilai Pancasila secara konsisten dalam seluruh aspek kehidupan berbangsa dan bernegara.</p>
+
+                <div class="quad-grid reveal">
+                    <div class="quad">
+                        <span class="quad-letter" aria-hidden="true">S</span>
+                        <h3>Kekuatan Utama</h3>
+                        <p>Pancasila, geografis strategis, bonus demografi, kebinekaan, kekayaan SDA, kekuatan militer.</p>
                     </div>
-
-                    <div class="weakness-modern-card high">
-                        <div class="weak-indicator"></div>
-                        <div class="weak-number">03</div>
-                        <h4>Kesenjangan Ekonomi</h4>
-                        <div class="weak-stat">Gini: 39.0</div>
-                        <p>Ketimpangan pendapatan tinggi. 1% warga menguasai hampir separuh aset. Indeks Gini naik dari 30,0 (1990-an) menjadi 39,0 (2017).</p>
+                    <div class="quad">
+                        <span class="quad-letter" aria-hidden="true">W</span>
+                        <h3>Kelemahan</h3>
+                        <p>SDM rendah, pembangunan tidak merata, kesenjangan ekonomi, korupsi, pengelolaan SDA belum optimal.</p>
                     </div>
-
-                    <div class="weakness-modern-card medium">
-                        <div class="weak-indicator"></div>
-                        <div class="weak-number">04</div>
-                        <h4>Pengelolaan SDA Belum Maksimal</h4>
-                        <div class="weak-stat">Rp17K T/th</div>
-                        <p>Potensi alam hayati dan non-hayati belum dikelola penuh. Potensi laut senilai Rp17 ribu triliun/tahun belum optimal.</p>
+                    <div class="quad">
+                        <span class="quad-letter" aria-hidden="true">O</span>
+                        <h3>Peluang Besar</h3>
+                        <p>Ekonomi ke&#8209;7 dunia, kemajuan iptek, magnet investasi, pariwisata global, industri halal.</p>
                     </div>
-
-                    <div class="weakness-modern-card critical">
-                        <div class="weak-indicator"></div>
-                        <div class="weak-number">05</div>
-                        <h4>Korupsi Masih Merajalela</h4>
-                        <div class="weak-stat">Rp29.4T</div>
-                        <p>Tren kerugian negara naik tajam. Data ICW mencatat korupsi Rp29,4 Triliun (2021), dan akumulasi KPK tembus Rp168 Triliun (2004–2019).</p>
-                    </div>
-
-                    <div class="weakness-modern-card high">
-                        <div class="weak-indicator"></div>
-                        <div class="weak-number">06</div>
-                        <h4>Pungutan Liar (Pungli)</h4>
-                        <div class="weak-stat">33%</div>
-                        <p>Ribuan OTT merusak layanan publik. Instansi paling rawan (2015): Pemda (33%), Lembaga Pendidikan (13%), dan Kepolisian (7%).</p>
-                    </div>
-
-                    <div class="weakness-modern-card medium">
-                        <div class="weak-indicator"></div>
-                        <div class="weak-number">07</div>
-                        <h4>Tingginya Risiko Bencana Alam</h4>
-                        <div class="weak-stat">3,544</div>
-                        <p>Terletak di jalur gempa aktif dan gunung berapi. Pada 2022, tercatat ada 3.544 bencana alam yang merusak infrastruktur ekonomi.</p>
+                    <div class="quad">
+                        <span class="quad-letter" aria-hidden="true">T</span>
+                        <h3>Tantangan</h3>
+                        <p>Ideologi asing, ancaman siber, globalisasi budaya, individualisme, radikalisme, intoleransi.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Summary -->
-        <section class="summary-modern">
+        <!-- ══════════════════ TIM ══════════════════ -->
+        <section class="section section--alt" id="tim" aria-labelledby="tim-title">
             <div class="container">
-                <div class="summary-content">
-                    <h2 class="summary-title">Kesimpulan</h2>
-                    <p class="summary-text">Indonesia memiliki <strong>potensi dan peluang besar</strong> untuk menjadi negara maju di era global. Namun, berbagai <strong>tantangan eksternal</strong> dan <strong>kelemahan internal</strong> harus diatasi dengan penerapan nilai-nilai Pancasila secara konsisten dalam seluruh aspek kehidupan berbangsa dan bernegara.</p>
-                    
-                    <div class="summary-grid-modern">
-                        <div class="summary-modern-box success">
-                            <div class="summary-icon">■</div>
-                            <h4>Kekuatan Utama</h4>
-                            <p>Pancasila, Geografis Strategis, Bonus Demografi, Kebinekaan, Kekayaan SDA, Kekuatan Militer</p>
-                        </div>
-                        <div class="summary-modern-box info">
-                            <div class="summary-icon">■</div>
-                            <h4>Peluang Besar</h4>
-                            <p>Ekonomi #7 Dunia, Kemajuan Iptek, Magnet Investasi, Pariwisata Global, Industri Halal Dunia</p>
-                        </div>
-                        <div class="summary-modern-box warning">
-                            <div class="summary-icon">■</div>
-                            <h4>Tantangan</h4>
-                            <p>Ideologi Asing, Ancaman Siber, Globalisasi Budaya, Individualisme, Radikalisme, Intoleransi</p>
-                        </div>
-                        <div class="summary-modern-box danger">
-                            <div class="summary-icon">■</div>
-                            <h4>Kelemahan</h4>
-                            <p>SDM Rendah, Kesenjangan Ekonomi, Korupsi Merajalela, Pengelolaan SDA Belum Optimal</p>
-                        </div>
+                <header class="section-head">
+                    <span class="section-index" aria-hidden="true">05</span>
+                    <div class="section-head-body">
+                        <p class="kicker">Tim Penyusun</p>
+                        <h2 class="section-title" id="tim-title">Anggota Kelompok</h2>
+                        <p class="section-lead">Tim yang menyusun materi pembelajaran PPKn ini.</p>
                     </div>
-                </div>
-            </div>
-        </section>
+                </header>
 
-        <!-- Team Section -->
-        <section id="team" class="section team-modern">
-            <div class="container">
-                <div class="section-intro centered">
-                    <span class="section-label">Tim Penyusun</span>
-                    <h2 class="section-title-large">Anggota Kelompok</h2>
-                    <p class="section-lead">Tim yang menyusun materi pembelajaran PPKn ini</p>
-                </div>
-                
-                <div class="team-modern-grid">
-                    <div class="team-member">
-                        <div class="member-photo">
-                            <div class="photo-placeholder">
-                                <span>AF</span>
-                            </div>
-                        </div>
-                        <h3 class="member-name">Afnan Fauzi Prakoso</h3>
-                    </div>
-
-                    <div class="team-member">
-                        <div class="member-photo">
-                            <div class="photo-placeholder">
-                                <span>AP</span>
-                            </div>
-                        </div>
-                        <h3 class="member-name">Annisa Putri Ramadhani</h3>
-                    </div>
-
-                    <div class="team-member">
-                        <div class="member-photo">
-                            <div class="photo-placeholder">
-                                <span>BA</span>
-                            </div>
-                        </div>
-                        <h3 class="member-name">Baraka Adisa Aprilio Al-Kaustar</h3>
-                    </div>
-
-                    <div class="team-member">
-                        <div class="member-photo">
-                            <div class="photo-placeholder">
-                                <span>CN</span>
-                            </div>
-                        </div>
-                        <h3 class="member-name">Chansa Nisrin</h3>
-                    </div>
-
-                    <div class="team-member">
-                        <div class="member-photo">
-                            <div class="photo-placeholder">
-                                <span>FA</span>
-                            </div>
-                        </div>
-                        <h3 class="member-name">Faiza Alya Putri Chaniago</h3>
-                    </div>
-
-                    <div class="team-member">
-                        <div class="member-photo">
-                            <div class="photo-placeholder">
-                                <span>SN</span>
-                            </div>
-                        </div>
-                        <h3 class="member-name">Shofiyatul Nur Ghilbah</h3>
-                    </div>
-
-                    <div class="team-member">
-                        <div class="member-photo">
-                            <div class="photo-placeholder">
-                                <span>SA</span>
-                            </div>
-                        </div>
-                        <h3 class="member-name">Siti Aisyah Setianingrum Sudjiono</h3>
-                    </div>
-                </div>
+                <!-- PLACEHOLDER FOTO: ganti isi .member-frame dengan <img class="media-img" src="images/afnan.jpg" alt="…"> -->
+                <ul class="team-grid">
+                    <li class="member reveal">
+                        <div class="member-frame"><img class="media-img" src="images/foto afnan.jpeg" alt="…"></div>
+                        <p class="member-name">Afnan Fauzi Prakoso</p>
+                    </li>
+                    <li class="member reveal">
+                        <div class="member-frame"><img class="media-img" src="images/foto nisa.jpeg" alt="…"></div>
+                        <p class="member-name">Annisa Putri Ramadhani</p>
+                    </li>
+                    <li class="member reveal">
+                       <div class="member-frame"><img class="media-img" src="images/foto disa.jpeg" alt="…"></div>
+                        <p class="member-name">Baraka Adisa Aprilio Al&#8209;Kaustar</p>
+                    </li>
+                    <li class="member reveal">
+                        <div class="member-frame"><img class="media-img" src="images/foto chansa.jpeg" alt="…"></div>
+                        <p class="member-name">Chansa Nisrin</p>
+                    </li>
+                    <li class="member reveal">
+                        <div class="member-frame"><img class="media-img" src="images/foto faiza.jpeg" alt="…"></div>
+                        <p class="member-name">Faiza Alya Putri Chaniago</p>
+                    </li>
+                    <li class="member reveal">
+                        <div class="member-frame"><img class="media-img" src="images/foto shofi.jpeg" alt="…"></div>
+                        <p class="member-name">Shofiyatul Nur Ghilbah</p>
+                    </li>
+                    <li class="member reveal">
+                        <div class="member-frame"><img class="media-img" src="images/foto aisyah.jpeg" alt="…"></div>
+                        <p class="member-name">Siti Aisyah Setianingrum Sudjiono</p>
+                    </li>
+                </ul>
             </div>
         </section>
     </main>
 
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <span class="brand-icon">🇮🇩</span>
-                    <span class="brand-text">Indonesia di Era Global</span>
-                </div>
-                <div class="footer-text">
-                    <p>&copy; 2026 Website PPKn Kelompok 2 - Materi Indonesia di Era Global</p>
-                    <p>Dibuat untuk tujuan pembelajaran Pendidikan Pancasila dan Kewarganegaraan</p>
-                </div>
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div>
+                <p class="footer-brand"><span class="brand-mark" aria-hidden="true">ID</span> Indonesia di Era Global</p>
+                <p class="footer-note">Analisis SWOT &mdash; Kekuatan, Kelemahan, Peluang, dan Tantangan.</p>
+            </div>
+            <div class="footer-meta">
+                <p>&copy; 2026 Website PPKn Kelompok 2</p>
+                <p>Dibuat untuk tujuan pembelajaran Pendidikan Pancasila dan Kewarganegaraan.</p>
             </div>
         </div>
     </footer>
 
-    <script src="script-new.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
